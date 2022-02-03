@@ -83,13 +83,13 @@ function SetStatusChanged(status) {
     }
     $(el).css("opacity", "" + 1 - i * 0.1);
   });
-  if (status === "Workshop Complete") {
+  if (status === "Мастерская завершена") {
     allow_increment = false;
     setLoad(80);
-  } else if (status === "Client info sent!") {
+  } else if (status === "Информация о клиенте отправлена!") {
     allow_increment = false;
     setLoad(95);
-  } else if (status === "Starting Lua...") {
+  } else if (status === "Запуск Lua...") {
     setLoad(100);
   } else {
     if (allow_increment) {
@@ -108,10 +108,10 @@ function loadAll() {
 
   // first time loading if DownloadingFile isn't called after some time
   setTimeout(function() {
-    debug("Checking if first time loading.. " + downloadingFileCalled);
+    debug("Проверка первой загрузки.. " + downloadingFileCalled);
     if (downloadingFileCalled) {
       announce(
-        "This is your first time loading please wait for the files to download",
+        "Это ваша первая загрузка, пожалуйста, дождитесь загрузки файлов",
         true
       );
     }
@@ -175,7 +175,7 @@ $(document).ready(function() {
   // if it isn't loaded by gmod load manually
   setTimeout(function() {
     if (!isGmod) {
-      debug("No Garry's mod testing..");
+      debug("Нет тестирования мода Garry..");
       isTest = true;
       loadAll();
 
