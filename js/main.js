@@ -180,12 +180,12 @@ $(document).ready(function() {
       loadAll();
 
       GameDetails(
-        "Servername",
-        "Serverurl",
-        "Mapname",
-        "Maxplayers",
+        "Имя сервера",
+        "URL-адрес сервера",
+        "Название карты",
+        "Максимум игроков",
         "SteamID",
-        "Gamemode"
+        "Игровой режим"
       );
 
       var totalTestFiles = 100;
